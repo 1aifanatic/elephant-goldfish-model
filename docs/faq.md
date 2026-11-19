@@ -20,6 +20,21 @@ please remember: *You own the outcomes.*
     hierarchies) that provides high-quality context for future development
     loops.
 
+#### Q: How can I share a review example?
+
+**A**: If you choose to share a review, post an excerpt in
+[Show and tell](https://github.com/google/elephant-goldfish-model/discussions/categories/show-and-tell).
+EGM leaves publication to you. Review outputs can repeat private details from
+their inputs. Remove secrets, names, and private project data from every excerpt,
+including file paths and links. See [EGM data handling](privacy.md).
+
+* Show the original passage, the reviewer's finding, and the evidence it cited.
+* Explain what the document owner decided and why, including any findings they
+  rejected.
+* Show the revised passage, or say why the owner kept the original.
+* Give the elapsed time and cost if you recorded them. Mark either as unknown
+  when you have no measurement.
+
 #### Q: Will SWEs become obsolete under EGM?
 
 **A**: In our opinion? No. However, code generation will be increasingly
