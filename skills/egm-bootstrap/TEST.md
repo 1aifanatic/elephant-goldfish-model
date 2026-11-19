@@ -15,3 +15,7 @@ Frontmatter and link checks run in `pytest tests/unit` (see [TESTING.md](../../T
    - Run in an environment without task delegation tools.
    - Verify that the agent reads source files and performs the scout steps inline, then generates and checks the contracts.
    - Repeat with more than 15 directories and verify that the user confirmation gate still applies.
+4. **Updating an Existing Contract**:
+   - In a scratch directory, create a source file with one public function and a README with a hand-written runbook note.
+   - Bootstrap the directory. Verify the README documents the function and retains the runbook note.
+   - Add a second public function and rerun bootstrap. Verify both functions appear in the contract and the note still appears once.
