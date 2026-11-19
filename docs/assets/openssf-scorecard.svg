@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="146" height="20" viewBox="0 0 146 20">
+  <title>OpenSSF Scorecard</title>
+  <rect width="146" height="20" rx="3" fill="#374151"/>
+  <text x="73" y="14" text-anchor="middle" fill="white"
+        font-family="Verdana, sans-serif" font-size="12">OpenSSF Scorecard</text>
+</svg>

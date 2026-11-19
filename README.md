@@ -148,6 +148,8 @@ You can use each skill when you need it. You do not have to follow the full sequ
 
 ## Contribute
 
+<a href="https://scorecard.dev/viewer/?uri=github.com/google/elephant-goldfish-model"><img src="docs/assets/openssf-scorecard.svg" alt="View the OpenSSF Scorecard report for EGM"></a>
+
 See the [accessibility statement](https://github.com/google/elephant-goldfish-model/blob/main/ACCESSIBILITY.md)
 for accessibility goals, known limits, and how to report barriers.
 
