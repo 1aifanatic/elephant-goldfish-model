@@ -25,6 +25,14 @@ Install the whole plugin. Skill-only installers that copy `skills/` alone
 break EGM, because the skills read `agents/` and
 `resources/document_standards/` at run time.
 
+For Codex, use the plugin marketplace command in the table. In a clean
+workspace, the skills.sh CLI (`skills@1.9.0`) copied all seven skills from
+the extracted EGM v0.1.1 OpenAI release ZIP. Each installed `SKILL.md`
+matched the release, but all seven links to `../../docs/codex.md` were
+broken and the shared reviewer personas and standards were missing.
+[Issue #150](https://github.com/google/elephant-goldfish-model/issues/150)
+tracks verification of this install path.
+
 ### Antigravity App and Antigravity for IDEs
 
 - **Antigravity App**: Run `/plugin`, ask the agent `Install https://github.com/google/elephant-goldfish-model`, or manually install into `~/.gemini/config/plugins/egm/` using the commands below.
