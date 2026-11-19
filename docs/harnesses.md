@@ -19,6 +19,7 @@ text.
 | Codex CLI | `codex plugin marketplace add google/elephant-goldfish-model && codex plugin add egm@egm` |
 | ChatGPT workspace import | Admin > Plugins > Add > Import marketplace, repo URL `https://github.com/google/elephant-goldfish-model`, path `.agents/plugins`; cloud review limits still apply |
 | omp | `omp plugin marketplace add google/elephant-goldfish-model && omp plugin install egm@egm` |
+| ZCode | In Settings → Plugin Management → Discover, select **+**, add `https://github.com/google/elephant-goldfish-model`, then select **Get** for EGM. |
 | Muse | `git clone https://github.com/google/elephant-goldfish-model.git && muse plugins install ./elephant-goldfish-model --scope user && muse plugins approve egm` |
 
 Install the whole plugin. Skill-only installers that copy `skills/` alone
@@ -165,6 +166,13 @@ control is verified here for Codex or Antigravity.
 **Muse** (1.4.14) has a working installation path. `muse plugins validate` reports the plugin valid with all seven skills and all ten agent adapters supported; every agent tool projection is unsupported, so Claude tool allowlists do not restrict Muse reviewers. Install from a local path; `marketplace add` on this repository discovers zero plugins because Muse reads the Codex catalog first. End-to-end workflow fixtures passed on 2026-10-30 (brainstorm, draft, and uninterrupted review with 15 fresh-context reviewers); named `egm/egm-*` agents cannot be spawned in this runtime, so reviewers used the general-purpose fallback reading the installed persona first. See the [Muse guide](https://github.com/google/elephant-goldfish-model/blob/main/docs/muse.md). No skill routes a Muse session to that guide yet ([#252](https://github.com/google/elephant-goldfish-model/issues/252)), so point the session at it.
 
 **Windsurf** (renamed Devin Desktop on 2026-06-02; [#376](https://github.com/google/elephant-goldfish-model/issues/376)) has experimental workspace routing. The rule and workflow files resolve the shared `skills/*/SKILL.md`, `agents/*.md`, and `resources/document_standards/*.md` files directly. They do not copy skill text. Goldfish reviews stop if fresh-context, read-only subagent delegation is unavailable, and reviewers launch on the host's read-only subagent profile. Devin CLI 3000.12.43 runs on 2026-11-10 passed routing, human pauses, read-only reviewers, and parent-marker isolation with every file write denied, so no workflow ran to a final artifact. Devin Desktop and the Devin CLI run the same agent, Devin Local, which replaced Cascade. The Devin Desktop IDE remains untested. The CLI does not list `.windsurf/workflows/` as slash commands; `/egm-*` requests route through the rule. Denying a permission prompt ends the host's turn without a message; send a follow-up message to continue. See the [design](https://github.com/google/elephant-goldfish-model/blob/main/docs/designs/windsurf_support.md#recorded-cli-evidence-2026-11-10) for the evidence.
+
+**ZCode** loads the full plugin through the Claude marketplace manifest. On
+ZCode 3.17.2 for Linux, the [installation report](https://github.com/google/elephant-goldfish-model/issues/368)
+records seven skills under `/egm:` and ten named subagent types at EGM commit
+`5382b17`. The reporter also describes a review using the generic subagent tool.
+End-to-end brainstorm, draft, and review traces and independent checks of
+reviewer isolation and write permissions are still needed.
 
 See the [harness test record](https://github.com/google/elephant-goldfish-model/blob/main/TESTING.md#harness-test-record) for tested surfaces and limits.
 
